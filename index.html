@@ -1,19 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestell App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/standard.css">
-    <link rel="stylesheet" href="styles/basket.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/menu.css">
-</head>
-<body>
-    
-</body>
-<script src="scripts/db.js"></script>
-<script src="scripts/template.js"></script>
-<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/standard.css" />
+    <link rel="stylesheet" href="styles/basket.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="menu_content">
+        <section class="menu_aot"></section>
+
+        <section class="menu_category" id="burger"></section>
+
+        <section class="menu_category" id="pizza"></section>
+
+        <section class="menu_category" id="salad"></section>
+      </section>
+
+      <aside class="basket_wrapper">
+        <section class="basket"></section>
+      </aside>
+    </main>
+
+    <dialog></dialog>
+
+    <footer></footer>
+  </body>
+  <script src="scripts/db.js"></script>
+  <script src="scripts/template.js"></script>
+  <script src="script.js"></script>
 </html>

@@ -1,0 +1,9 @@
+.main_content{
+width: calc(100% - 300px);
+background-color: blue;
+height: 10000px;
+}
+
+main{
+    display: flex;
+}
