@@ -51,3 +51,30 @@ let pizza = [
     image: "images/pizza_quattro_formaggi_chicken.png"
   }
 ];
+
+let salad = [
+  {
+    name: "Warm beef arugula salad",
+    description: "Arugula, beef, parmesan, cherry tomatoes",
+    price: 14.90,
+    image: "images/salad_warm_beef.png"
+  },
+  {
+    name: "Mix green salad",
+    description: "Fresh mixed green salad",
+    price: 7.90,
+    image: "images/salad_mix_green.png"
+  },
+  {
+    name: "Caesar salad with sea food",
+    description: "Romaine lettuce, seafood, parmesan, caesar dressing",
+    price: 16.90,
+    image: "images/salad_caesar_seafood.png"
+  },
+  {
+    name: "Vegan green salad with tofu",
+    description: "Green salad, tofu, vegetables",
+    price: 14.90,
+    image: "images/salad_vegan_tofu.png"
+  }
+];
