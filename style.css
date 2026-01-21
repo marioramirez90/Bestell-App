@@ -1,9 +1,20 @@
-.main_content{
+.menu_content{
 width: calc(100% - 300px);
-background-color: blue;
-height: 10000px;
+height: 1000px;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    height: 128px;
+    background-color: rgba(231, 108, 31, 1);
+    padding-left: 116px;
+    padding-right: 26px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
-main{
-    display: flex;
-}
