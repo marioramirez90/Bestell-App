@@ -24,3 +24,30 @@ let burger = [
     image: "images/burger_big_chicken.png"
   }
 ];
+
+let pizza = [
+  {
+    name: "Pizza Margherita",
+    description: "Tomato sauce, mozzarella",
+    price: 11.90,
+    image: "images/pizza_margherita.png"
+  },
+  {
+    name: "Pizza Chorizo",
+    description: "Tomato sauce, mozzarella, chorizo",
+    price: 13.90,
+    image: "images/pizza_chorizo.png"
+  },
+  {
+    name: "Funghi",
+    description: "Tomato sauce, cheese, mushrooms",
+    price: 12.90,
+    image: "images/pizza_funghi.png"
+  },
+  {
+    name: "Quattro formaggi with chicken",
+    description: "Cream sauce, mozzarella, gorgonzola, parmesan, chicken",
+    price: 15.90,
+    image: "images/pizza_quattro_formaggi_chicken.png"
+  }
+];
