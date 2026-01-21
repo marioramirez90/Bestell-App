@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:rgba(231, 108, 31, 1) ;
 }
 main{
     display: flex;

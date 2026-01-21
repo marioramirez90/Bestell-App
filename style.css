@@ -29,4 +29,34 @@ header{
     height: 480px;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 250px;
+}
+.menu_image{
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h1_header{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.h1_header img{
+    height:32px;
+    width: 110px;
+}
+.menu_category{
+    height: 800px;
+}
+.menu_category_header{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(231, 108, 31, 1);
 }

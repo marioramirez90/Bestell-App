@@ -1,0 +1,19 @@
+html{
+    font-family:"Palanquin Dark", sans-serif;
+}
+h1{
+    font-size: 48px;
+    font-style: bold;
+    font-weight: 700;
+    margin-bottom:26px ;
+}
+.logo_haous{
+    color: rgba(54, 53, 52, 1);
+}
+.p-tag{
+    color: rgba(54, 53, 52, 1);
+    font-size: 24px;
+    font-weight: 700;
+    font-style: bold;
+    
+}
