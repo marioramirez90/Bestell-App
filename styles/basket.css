@@ -1,6 +1,5 @@
 
 .basket{
-    display: none;
    position: fixed;
     right: 0px;
     top: 450px;
@@ -11,4 +10,7 @@
     height: 480px;
     width: 435px;
     border-radius: 30px 0 0 30px; 
+    margin-right: 555px;
 }
+
+ 
