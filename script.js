@@ -2,6 +2,7 @@ function init(){
     renderBurger();
     renderPizza();
     renderSalad();
+    renderBusket()
 }
 
 function renderBurger(){
@@ -24,4 +25,13 @@ function renderSalad(){
     for (let i = 0; i < salad.length; i++) {
         saladRef.innerHTML += saladMenuRender(i)
     }
+}
+
+function renderBusket(){
+    let busket = document.getElementById("basket")
+    busket.innerHTML += ` <section class="empty-basket">
+                 <h2>Dein WarenKorb</h2>
+                 <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
+                 <img src="assets/icons/basket.svg" alt="">
+            </section>`
 }
