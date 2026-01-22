@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/menu.css" />
   </head>
-  <body>
+  <body onload="init()">
     <header>
         <nav class="navbar">
             <div class="app-logo">
@@ -36,25 +36,13 @@
             </div>
         </section>
 
-        <section class="menu_category" id="burger">
+        <section class="menu_category">
             <div class="menu_category_header">
                 <img src="assets/img/Chanese 1.png" alt="">
                 <h2>Burger & Sandwiches</h2>
             </div>
-             <article class="article_menu">
-                    <div class="article_header">
-                    <img src="assets/img/burger_veggie.png" alt="burger">
-                    </div>
-                    <div class="article_main">
-                    <h2>Veggie mushroom black burger</h2>
-                    <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                    </div>
-                    <div class="article_bottom">
-                        <span>16,90€</span>
-                        <button class="article_button">add to basket</button>
-                    </div>
-
-                </article>
+            <div class="manu"id="burgerMenu" ></div>
+             
         </section>
 
         <section class="menu_category" id="pizza">
@@ -62,14 +50,16 @@
                 <img src="assets/img/Pizza 1.png" alt="">
                 <h2 class="h-tag">Pizza<span>(30cm)</span></h2>
             </div> 
+             <div class="manu"id="pizzaMenu" ></div>
         </section>
 
         <section class="menu_category" id="salad">
             <div class="menu_category_header">
 
                 <img src="assets/img/Salad 1.png" alt="">
-                <h2>Salad</h2>
+                <h2>Salat</h2>
             </div>
+             <div class="manu"id="saladMenu" ></div>
         </section>
       </section>
 

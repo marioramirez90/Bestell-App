@@ -1,80 +1,80 @@
 let burger = [
   {
-    name: "Veggie mushroom black burger",
-    description: "Fried green beans, tomatoes, lettuce, mushrooms",
+    name: "Veggie Champignon Burger",
+    description: "Gebratene grüne Bohnen, Tomaten, Salat, Champignons",
     price: 16.90,
-    image: "images/burger_veggie.png"
+    image: "assets/img/burger_veggie.png"
   },
   {
-    name: "All meat burger",
-    description: "Beef, bacon, beef patty, cheddar cheese",
+    name: "All Meat Burger",
+    description: "Rindfleisch, Bacon, Rindfleisch-Patty, Cheddar-Käse",
     price: 15.90,
-    image: "images/burger_all_meat.png"
+    image: "assets/img/burger_all_meat.png"
   },
   {
-    name: "Beef red burger",
-    description: "Beef, cheese, tomatoes, sesame bread",
+    name: "Beef Red Burger",
+    description: "Rindfleisch, Käse, Tomaten, Sesambrötchen",
     price: 14.90,
-    image: "images/burger_beef_red.png"
+    image: "assets/img/burger_beef_red.png"
   },
   {
-    name: "Big chicken burger",
-    description: "Chicken fillet, tomatoes, lettuce, cheese, chili sauce",
+    name: "Big Chicken Burger",
+    description: "Hähnchenfilet, Tomaten, Salat, Käse, Chilisauce",
     price: 15.90,
-    image: "images/burger_big_chicken.png"
+    image: "assets/img/burger_big_chicken.png"
   }
 ];
 
 let pizza = [
   {
     name: "Pizza Margherita",
-    description: "Tomato sauce, mozzarella",
+    description: "Tomatensauce, Mozzarella",
     price: 11.90,
-    image: "images/pizza_margherita.png"
+    image: "assets/img/pizza_margherita.png"
   },
   {
     name: "Pizza Chorizo",
-    description: "Tomato sauce, mozzarella, chorizo",
+    description: "Tomatensauce, Mozzarella, Chorizo",
     price: 13.90,
-    image: "images/pizza_chorizo.png"
+    image: "assets/img/pizza_chorizo.png"
   },
   {
-    name: "Funghi",
-    description: "Tomato sauce, cheese, mushrooms",
+    name: "Pizza Funghi",
+    description: "Tomatensauce, Käse, Champignons",
     price: 12.90,
-    image: "images/pizza_funghi.png"
+    image: "assets/img/pizza_funghi.png"
   },
   {
-    name: "Quattro formaggi with chicken",
-    description: "Cream sauce, mozzarella, gorgonzola, parmesan, chicken",
+    name: "Quattro Formaggi mit Hähnchen",
+    description: "Sahnesauce, Mozzarella, Gorgonzola, Parmesan, Hähnchen",
     price: 15.90,
-    image: "images/pizza_quattro_formaggi_chicken.png"
+    image: "assets/img/pizza_quattro_formaggi_chicken.png"
   }
 ];
 
 let salad = [
   {
-    name: "Warm beef arugula salad",
-    description: "Arugula, beef, parmesan, cherry tomatoes",
+    name: "Warmer Rindfleisch-Rucola-Salat",
+    description: "Rucola, Rindfleisch, Parmesan, Cherrytomaten",
     price: 14.90,
-    image: "images/salad_warm_beef.png"
+    image: "assets/img/salad_warm_beef.png"
   },
   {
-    name: "Mix green salad",
-    description: "Fresh mixed green salad",
+    name: "Gemischter grüner Salat",
+    description: "Frischer gemischter Blattsalat",
     price: 7.90,
-    image: "images/salad_mix_green.png"
+    image: "assets/img/salad_mix_green.png"
   },
   {
-    name: "Caesar salad with sea food",
-    description: "Romaine lettuce, seafood, parmesan, caesar dressing",
+    name: "Caesar Salat mit Meeresfrüchten",
+    description: "Römersalat, Meeresfrüchte, Parmesan, Caesar-Dressing",
     price: 16.90,
-    image: "images/salad_caesar_seafood.png"
+    image: "assets/img/salad_caesar_seafood.png"
   },
   {
-    name: "Vegan green salad with tofu",
-    description: "Green salad, tofu, vegetables",
+    name: "Veganer grüner Salat mit Tofu",
+    description: "Grüner Salat, Tofu, Gemüse",
     price: 14.90,
-    image: "images/salad_vegan_tofu.png"
+    image: "assets/img/salad_vegan_tofu.png"
   }
 ];

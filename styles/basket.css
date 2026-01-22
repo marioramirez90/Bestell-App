@@ -1,5 +1,6 @@
 
 .basket{
+    display: none;
    position: fixed;
     right: 0px;
     top: 450px;
