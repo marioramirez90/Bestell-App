@@ -39,6 +39,10 @@ function renderBusket(){
 }
 
 function closeBasket(){
-  let basket= document.getElementById("basket");
-  basket.style.display = "none";
+  let closeBasket= document.getElementById("basket");
+  closeBasket.style.display = "none";
+}
+function openBasket(){
+  let openBasket = document.getElementById("basket")
+  openBasket.style.display ="flex";
 }
