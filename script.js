@@ -1,4 +1,6 @@
-let basketItems = []
+let cart = [];
+let subtotal = 0;
+let deliverFree = 4.99
 
 function init() {
   renderMenu();
@@ -27,12 +29,22 @@ function renderMenu() {
 
 function renderBusket() {
   const busketRef = document.getElementById("basket")
-  if (basketItems.length === 0) {
+  if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
   } else {
     busketRef.innerHTML = fullBasket()
   }
+}
 
+function renderCart(){
+  let cartText = ""
+  for (let i = 0; i < cart.length; i++) {
+    const cartRef = cart[i];
+    const cartTotal = cartRef.item.price * cartRef.quantity
+    subtotal += cartTotal
+    cartText += fullBasket();
+    
+  }
 }
 
 

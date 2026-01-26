@@ -33,15 +33,35 @@ function fullBasket(){
         </div>
         <div>
             <div basket_bottom>
-                <img src="" alt="">
-                <span class="basket_value">2</span>
-                <span class="busket_plus">+</span>
+                    <img src="" alt="">
+                    <button class="busket_delet"><img src="assets/icons/delete.svg" alt=""></button>
+                    <span class="basket_value"></span>
+                    <button class="busket_plus">+</button>
             </div>
-            <span class="busket_price"></span>
+            <span class="busket_price">€</span>
         </div>
     </article>
 </section>`
 }
+
+    return `
+    </section>
+    <section class="total_amount">
+        <div class="subtotal">
+            <p>Zwischensumme :</p>
+            <span></span>
+        </div>
+        <div class="Deliver_free">
+            <p>Lieferkosten</p>
+            <span></span>
+        </div>
+        <div class="Total_price">
+            <p>gesamtsumme:</p>
+            <span></span>
+        </div>
+    </section>
+    `
+
 
 /*function burgerMenuRender(i){
     return `<article class="article_menu">
