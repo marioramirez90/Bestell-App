@@ -30,9 +30,14 @@ function renderSalad(){
 function renderBusket(){
     let busket = document.getElementById("basket")
     busket.innerHTML += ` <section class="empty-basket">
-                 <button class="close" id="closeButton" onclick="">X</button>
+                 <button class="close" id="closeButton" onclick="closeBasket()">X</button>
                  <h2>Dein WarenKorb</h2>
                  <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
                  <img src="assets/icons/basket.svg" alt="">
             </section>`
+}
+
+function closeBasket(){
+  let basket= document.getElementById("basket");
+  basket.style.display = "none";
 }
