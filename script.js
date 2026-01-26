@@ -28,7 +28,8 @@ function renderMenu() {
 
 function renderBusket() {
   const busketRef = document.getElementById("basket")
-  const test = document.getElementById("addtocart")
+  const addToCartRef = document.getElementById("addtocart")
+  const priceEnd = document.getElementById("price_end")
 
   if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
