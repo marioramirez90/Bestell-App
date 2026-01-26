@@ -1,4 +1,49 @@
-function burgerMenuRender(i){
+function menuMealrender(menuRef){
+    return `<article class="article_menu">
+                    <div class="article_header">
+                    <img src="${menuRef.image}" alt="burger">
+                    </div>
+                    <div class="article_main">
+                    <h2>${menuRef.name}</h2>
+                    <p>${menuRef.description}</p>
+                    </div>
+                    <div class="article_bottom">
+                        <span>${menuRef.price.toFixed(2)}€</span>
+                        <button class="article_button" onclick="addToBasket(${menuRef.id})">add to basket</button>
+                    </div>
+                </article>`;
+}
+
+function emptyBasket(){
+    return ` <section class="empty-basket">
+    <div class="close_btn"><button class="close" id="closeButton" onclick="closeBasket()">X</button></div>
+                 
+                 <h2>Dein WarenKorb</h2>
+                 <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
+                 <img src="assets/icons/basket.svg" alt="">
+            </section>`
+}
+
+function fullBasket(){
+    return `<section class="busket_full">
+    <article class="busket_item">
+        <div busket_header_name>
+            <span class="basket_total"></span>
+             <p class="basket_men_name" ></p>
+        </div>
+        <div>
+            <div basket_bottom>
+                <img src="" alt="">
+                <span class="basket_value">2</span>
+                <span class="busket_plus">+</span>
+            </div>
+            <span class="busket_price"></span>
+        </div>
+    </article>
+</section>`
+}
+
+/*function burgerMenuRender(i){
     return `<article class="article_menu">
                     <div class="article_header">
                     <img src="${burger[i].image}" alt="burger">
@@ -32,6 +77,7 @@ function pizzaMenuRender(i){
 function saladMenuRender(i){
     return `<article class="article_menu">
                     <div class="article_header">
+
                     <img src="${salad[i].image}" alt="burger">
                     </div>
                     <div class="article_main">
@@ -45,3 +91,4 @@ function saladMenuRender(i){
                 </article>`;
 
 }
+                */

@@ -1,26 +1,51 @@
-const burgerCategory = document.getElementById("burger");
-const pizzaCategory = document.getElementById("pizza");
-const saladCategory = document.getElementById("salad");
+let basketItems = []
 
-function init(){
-    renderMenu();
-   
+function init() {
+  renderMenu();
+  renderBusket();
+
 }
 
-function renderMenu(){
-  for (let i = 0; i < array.length; i++) {
-    
-    
+function renderMenu() {
+  const burgerCategory = document.getElementById("burgerMenu");
+  const pizzaCategory = document.getElementById("pizzaMenu");
+  const saladCategory = document.getElementById("saladMenu");
+
+  for (let i = 0; i < menu.length; i++) {
+    const menuRef = menu[i];
+    let categoryref;
+    if (i < 4) {
+      categoryref = burgerCategory;
+    } else if (i < 8) {
+      categoryref = pizzaCategory;
+    } else {
+      categoryref = saladCategory;
+    }
+    categoryref.innerHTML += menuMealrender(menuRef)
   }
 }
-function closeBasket(){
-  let closeBasket= document.getElementById("basket");
+
+function renderBusket() {
+  const busketRef = document.getElementById("basket")
+  if (basketItems.length === 0) {
+    busketRef.innerHTML = emptyBasket();
+  } else {
+    busketRef.innerHTML = fullBasket()
+  }
+
+}
+
+
+function closeBasket() {
+  let closeBasket = document.getElementById("basket");
   closeBasket.style.display = "none";
 }
-function openBasket(){
-  let openBasket = document.getElementById("basket")
-  openBasket.style.display ="flex";
+function openBasket() {
+  let openBasket = document.getElementById("basket");
+  openBasket.style.display = "flex";
 }
+
+
 /*function init(){
     renderBurger();
     renderPizza();
@@ -50,14 +75,5 @@ function renderSalad(){
     }
 }
 
-function renderBusket(){
-    let busket = document.getElementById("basket")
-    busket.innerHTML += ` <section class="empty-basket">
-    <div class="close_btn"><button class="close" id="closeButton" onclick="closeBasket()">X</button></div>
-                 
-                 <h2>Dein WarenKorb</h2>
-                 <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
-                 <img src="assets/icons/basket.svg" alt="">
-            </section>`
-}
+
 */
