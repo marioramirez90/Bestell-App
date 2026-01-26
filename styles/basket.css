@@ -49,6 +49,11 @@
   width: 120px;
 }
 
+.busket_full{
+    height: 400px;
+
+}
+
 @media screen and (max-width: 1275px) {
   .basket {
     position: fixed;

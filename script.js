@@ -1,5 +1,4 @@
 let cart = [];
-let subtotal = 0;
 let deliverFree = 4.99
 
 function init() {
@@ -29,38 +28,50 @@ function renderMenu() {
 
 function renderBusket() {
   const busketRef = document.getElementById("basket")
+
   if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
   } else { 
-    let cartHtml = "";
-        let currentSubtotal = 0;
-
+    let cartValue = "";
+        let subtotal = 0;
         for (let i = 0; i < cart.length; i++) {
-            // Summe rechnen: Preis * Menge
-            currentSubtotal += cart[i].item.price * cart[i].quantity;
-            // HTML für das einzelne Item erzeugen (wir übergeben 'i' als Index)
-            cartHtml += fullBasket(i);
+            subtotal += cart[i].item.price * cart[i].quantity;
+            cartValue += fullBasket(i);
         }
-    busketRef.innerHTML = fullBasket()
+    let total = subtotal + deliverFree;
+    cartValue += totalPrice(subtotal, total);
+    
+    busketRef.innerHTML = cartValue;
   }
 }
-
-function addToBasket(id){
-  let itemToAdd = menu.find(function(meal){
-    return meal.id === id;
-  });
-
-  let cartIndex = cart.findIndex(function(cartItem){
-
-  });
-  if (cartIndex === -1){
-    cart.push({item: itemToAdd, quantity: 1});
-}else {
-  cart[cartIndex].quantity++;
-}
-    renderBusket();
-    openBasket();
+function addToBasket(id) {
+  let itemToAdd = null;
+  for (let i = 0; i < menu.length; i++) {
+    if (menu[i].id === id) {
+      itemToAdd = menu[i];
+      break;
+    }
   }
+
+  let foundIndex = -1;
+  for (let j = 0; j < cart.length; j++) {
+    if (cart[j].item.id === id) {
+      foundIndex = j;
+      break;
+    }
+  }
+
+  if (foundIndex === -1) {
+    cart.push({ item: itemToAdd, quantity: 1 });
+  } else {
+    cart[foundIndex].quantity++;
+  }
+
+  renderBusket();
+  openBasket();
+}
+
+  
 function increaseQuantity(index) {
     cart[index].quantity++;
     renderBusket();

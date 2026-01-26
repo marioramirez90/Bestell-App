@@ -24,43 +24,44 @@ function emptyBasket(){
             </section>`
 }
 
-function fullBasket(index){
-    let cartRef = cart[index];
-    let TotalRef = cartRef.item.price * cartRef.quantity;
+function fullBasket(i){
+    let cartItemRef = cart[i];
+    let totalRef = cartItemRef.item.price * cartItemRef.quantity;
     return `<section class="busket_full">
+    <h2>Dein WarenKorb</h2>
     <article class="busket_item">
         <div busket_header_name>
-            <span class="basket_total">${cartRef.quantity}</span>
-             <p class="basket_menu_name" >$</p>
+            <span class="basket_total">${cartItemRef.quantity}</span>
+             <p class="basket_menu_name" >${cartItemRef.item.name}</p>
         </div>
         <div>
-            <div basket_bottom>
-                    <img src="" alt="">
-                    <button class="busket_delet"><img src="assets/icons/delete.svg" alt=""></button>
-                    <span class="basket_value"></span>
-                    <button class="busket_plus">+</button>
+            <div class="basket_bottom">
+                 <button class="busket_delet" onclick="decreaseQuantity(${i})">-</button>
+                 <span class="basket_value">${cartItemRef.quantity}</span>
+                 <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
+                 <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="del"></button>
             </div>
-            <span class="busket_price">€</span>
+            <span class="busket_price">${totalRef.toFixed(2)} €</span>
         </div>
     </article>
-</section>`
+</section>`;
 }
 
-    function TotalPrice (){
+    function totalPrice (subtotalParam, totalParam){
         return `
     </section>
     <section class="total_amount">
         <div class="subtotal">
             <p>Zwischensumme :</p>
-            <span></span>
+            <span>${subtotalParam.toFixed(2)} €</span>
         </div>
         <div class="Deliver_free">
             <p>Lieferkosten</p>
-            <span></span>
+            <span>${deliverFree.toFixed(2)} €</span>
         </div>
         <div class="Total_price">
             <p>gesamtsumme:</p>
-            <span></span>
+            <span>${totalParam.toFixed(2)} €</span>
         </div>
     </section>
     `
