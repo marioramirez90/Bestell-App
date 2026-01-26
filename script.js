@@ -36,16 +36,6 @@ function renderBusket() {
   }
 }
 
-function renderCart(){
-  let cartText = ""
-  for (let i = 0; i < cart.length; i++) {
-    const cartRef = cart[i];
-    const cartTotal = cartRef.item.price * cartRef.quantity
-    subtotal += cartTotal
-    cartText += fullBasket();
-    
-  }
-}
 
 
 function closeBasket() {
