@@ -31,13 +31,52 @@ function renderBusket() {
   const busketRef = document.getElementById("basket")
   if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
-  } else {
+  } else { 
+    let cartHtml = "";
+        let currentSubtotal = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+            // Summe rechnen: Preis * Menge
+            currentSubtotal += cart[i].item.price * cart[i].quantity;
+            // HTML für das einzelne Item erzeugen (wir übergeben 'i' als Index)
+            cartHtml += fullBasket(i);
+        }
     busketRef.innerHTML = fullBasket()
   }
 }
 
+function addToBasket(id){
+  let itemToAdd = menu.find(function(meal){
+    return meal.id === id;
+  });
 
+  let cartIndex = cart.findIndex(function(cartItem){
 
+  });
+  if (cartIndex === -1){
+    cart.push({item: itemToAdd, quantity: 1});
+}else {
+  cart[cartIndex].quantity++;
+}
+    renderBusket();
+    openBasket();
+  }
+function increaseQuantity(index) {
+    cart[index].quantity++;
+    renderBusket();
+}
+function decreaseQuantity(index) {
+    cart[index].quantity--;
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+    renderBusket();
+}
+
+function deleteItem(index) {
+    cart.splice(index, 1);
+    renderBusket();
+}
 function closeBasket() {
   let closeBasket = document.getElementById("basket");
   closeBasket.style.display = "none";

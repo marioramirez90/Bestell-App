@@ -24,12 +24,14 @@ function emptyBasket(){
             </section>`
 }
 
-function fullBasket(){
+function fullBasket(index){
+    let cartRef = cart[index];
+    let TotalRef = cartRef.item.price * cartRef.quantity;
     return `<section class="busket_full">
     <article class="busket_item">
         <div busket_header_name>
-            <span class="basket_total"></span>
-             <p class="basket_men_name" ></p>
+            <span class="basket_total">${cartRef.quantity}</span>
+             <p class="basket_menu_name" >$</p>
         </div>
         <div>
             <div basket_bottom>
