@@ -59,7 +59,7 @@ header{
     margin-top: -19px;
 }
 .menu_category{
-    height: 800px;
+  margin-bottom: 50px; 
     
 }
 .menu_category_header{
@@ -77,4 +77,43 @@ header{
 .h-tag{
     display: flex;
     gap: 20px;
+}
+
+@media screen and (max-width: 591px){
+    .menu_category_header{
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .menu_category_header img{
+    height: 60px;
+    width: 58px;
+    margin-bottom: -25px;
+}
+.h1_header{
+    
+    display: flex;
+    flex-direction: column-reverse;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.star-img{
+   width: 1100px;
+   height: 32px;
+    
+}
+.burger-img{
+    height: 150px;
+    margin-bottom: 50px;
+   
+}
+
+.menu_image{
+    margin-top: 670px;
+}
+
+
+
+   
 }
