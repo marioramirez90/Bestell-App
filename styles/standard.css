@@ -1,11 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color:rgba(231, 108, 31, 1) ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(231, 108, 31, 1);
 }
-main{
-    display: flex;
-    max-width: 1440px;
-    margin: 0 auto;
+body {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: calc(100vh - 128px);
 }

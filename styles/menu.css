@@ -1,156 +1,146 @@
-.article_menu{
-    display: flex;
-    gap: 15px;
-    background-color: rgba(253, 234, 220, 1);
-    width: 100%;
-    max-width: 700px;
-    padding: 10px;
-    margin: 30px auto;
-    border-radius: 12px;
-    padding-bottom: 0;
-    
+.article_menu {
+  display: flex;
+  gap: 15px;
+  background-color: rgba(253, 234, 220, 1);
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
+  margin: 30px auto;
+  border-radius: 12px;
+  padding-bottom: 0;
 }
 
-.article_menu img{
-    
-    width: 200px;
-    height: 120px;
+.article_menu img {
+  width: 200px;
+  height: 120px;
 }
 
-.article_main{
-    flex: 1;
-    min-width: 0;
+.article_main {
+  flex: 1;
+  min-width: 0;
 }
 
-
-.article_main h2{
-    color:rgba(54, 53, 52, 1) ;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: SemiBold;
-}
-.article_main p{
-     color:rgba(54, 53, 52, 1) ;
-     font-size: 14px;
-     font-weight: 500;
-     font-style:medium ;
-}
-.article_bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: end;
-    padding-right: 10px;
+.article_main h2 {
+  color: rgba(54, 53, 52, 1);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: SemiBold;
 }
 
-.article_bottom span{
-    color: rgba(54, 53, 52, 1);
-    font-size: 24px;
-    font-weight: 550;
+.article_main p {
+  color: rgba(54, 53, 52, 1);
+  font-size: 14px;
+  font-weight: 500;
+  font-style: medium;
 }
 
-.article_button{
-    height: 30px;
-    width: 115px;
-    padding: 5px 8px 5px 8px;
-    border: none;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(54, 53, 52, 1);
-    cursor: pointer;
-
+.article_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: end;
+  padding-right: 10px;
 }
 
-.manu{
-   
-    max-width: 900px;
-    margin: 0 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+.article_bottom span {
+  color: rgba(54, 53, 52, 1);
+  font-size: 24px;
+  font-weight: 550;
 }
 
-@media screen and (max-width: 750px){
+.article_button {
+  height: 30px;
+  width: 115px;
+  padding: 5px 8px 5px 8px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(54, 53, 52, 1);
+  cursor: pointer;
+}
 
+.manu {
+  max-width: 900px;
+  margin: 0 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
-.article_main h2{
+@media screen and (max-width: 750px) {
+  .article_main h2 {
     font-size: 14px;
     font-weight: 700;
     font-style: Bold;
     gap: 0;
-}
-.article_main p{
-     font-size: 10px;
-}
-.article_bottom{
+  }
+
+  .article_main p {
+    font-size: 10px;
+  }
+
+  .article_bottom {
     padding-right: 10px;
+  }
 }
 
+@media screen and (max-width: 591px) {
+  .manu {
+    margin: 0 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
-}
-@media screen and (max-width: 591px){
-
-   
-.article_menu{
+  .article_menu {
     display: flex;
     flex-direction: column;
     max-height: 270px;
     justify-content: center;
-    align-items: center;
-   
-    
-    
-    
-}
-.article_bottom{
+  }
+
+  .article_bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 10px;
     width: 100%;
-    padding: 10px 20px;
-    
-    
-}
+    padding-bottom: 15px;
+  }
+
   .article_header {
-        max-width: 560px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-        .article_menu img {
-        width: 100%;
-       
-        height: 86px;
-        border-radius: 12px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
+    max-width: 560px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
+  .article_menu img {
+    width: 100%;
 
-.article_main h2{
-   font-size: 22px;
-   margin-top: -20px;
-   font-style: normal;
-   font-weight: 200;
-   padding-right: 20px;
-   line-height: 1.1;
-   margin-bottom: 10px;
-}
-.article_main p{
+    height: 86px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .article_main h2 {
+    font-size: 20px;
+    margin-top: -20px;
+    font-style: normal;
+    font-weight: 200;
+    padding-right: 13px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .article_main p {
     font-size: 12px;
-    padding-right:20px ;
-     font-weight: 100;
-     line-height: 1.5;
-}
-.article_bottom span{
+    padding-right: 20px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+
+  .article_bottom span {
     color: rgba(54, 53, 52, 1);
     font-size: 24px;
     font-weight: 200;
-}
-.article_bottom{
-   padding-bottom: 15px;
-   padding: 10px 0;
-}
-
-
+  }
 }

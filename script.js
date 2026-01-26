@@ -30,7 +30,8 @@ function renderSalad(){
 function renderBusket(){
     let busket = document.getElementById("basket")
     busket.innerHTML += ` <section class="empty-basket">
-                 <button class="close" id="closeButton" onclick="closeBasket()">X</button>
+    <div class="close_btn"><button class="close" id="closeButton" onclick="closeBasket()">X</button></div>
+                 
                  <h2>Dein WarenKorb</h2>
                  <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
                  <img src="assets/icons/basket.svg" alt="">

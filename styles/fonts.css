@@ -1,45 +1,42 @@
-html{
-    font-family:"Palanquin Dark", sans-serif;
+html {
+  font-family: "Palanquin Dark", sans-serif;
 }
-h1{
-    font-size: 48px;
-    font-style: bold;
-    font-weight: 700;
-    margin-bottom:26px ;
+h1 {
+  font-size: 48px;
+  font-style: bold;
+  font-weight: 700;
+  margin-bottom: 26px;
 }
-h2{
-    color: white;
-    font-size: 38px;
-    font-weight: 700;
-    font-style: bold;
-  
+h2 {
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  font-style: bold;
 }
-h2 span{
-    color: white;
-    font-weight: 100;
+h2 span {
+  color: white;
+  font-weight: 100;
 }
-.logo_haous{
-    color: rgba(54, 53, 52, 1);
+.logo_haous {
+  color: rgba(54, 53, 52, 1);
 }
-.p-tag{
-    color: rgba(54, 53, 52, 1);
-    font-size: 24px;
-    font-weight: 700;
-    font-style: bold;
-    
+.p-tag {
+  color: rgba(54, 53, 52, 1);
+  font-size: 24px;
+  font-weight: 700;
+  font-style: bold;
 }
 
-@media screen and (max-width: 591px){
-h2{
+@media screen and (max-width: 591px) {
+  h2 {
     font-size: 20px;
-}
-h1{
+  }
+  h1 {
     font-size: 40px;
     margin-top: -10px;
     margin-bottom: 0;
-    
-}
-.p-tag{
+  }
+  .p-tag {
     color: rgba(54, 53, 52, 1);
     font-size: 18px;
     font-weight: 200;
@@ -49,6 +46,5 @@ h1{
     padding: 20px;
     text-align: center;
     line-height: 1.1;
-}
-  
+  }
 }
