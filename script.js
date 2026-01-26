@@ -1,4 +1,6 @@
 const burgerCategory = document.getElementById("burger");
+const pizzaCategory = document.getElementById("pizza");
+const saladCategory = document.getElementById("salad");
 
 function init(){
     renderMenu();
