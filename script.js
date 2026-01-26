@@ -29,10 +29,12 @@ function renderMenu() {
 function renderBusket() {
   const busketRef = document.getElementById("basket")
   const addToCartRef = document.getElementById("addtocart")
-  const priceEnd = document.getElementById("price_end")
+  const priceEndRef = document.getElementById("price_end")
 
   if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
+    addToCartRef.innerHTML = "";
+    priceEndRef.innerHTML = "";
   } else { 
     let cartValue = "";
         let subtotal = 0;
@@ -40,10 +42,13 @@ function renderBusket() {
             subtotal += cart[i].item.price * cart[i].quantity;
             cartValue += fullBasket(i);
         }
+
+        addToCartRef.innerHTML = cartValue;
+
     let total = subtotal + deliverFree;
-    cartValue += totalPrice(subtotal, total);
+    priceEndRef.innerHTML = totalPrice(subtotal, total);
     
-    test.innerHTML = cartValue;
+    busketRef.innerHTML = `<h2>Dein Warenkorb</h2>`;
   }
 }
 function addToBasket(id) {
