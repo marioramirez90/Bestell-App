@@ -1,25 +1,30 @@
 html {
   font-family: "Palanquin Dark", sans-serif;
 }
+
 h1 {
   font-size: 48px;
   font-style: bold;
   font-weight: 700;
   margin-bottom: 26px;
 }
+
 h2 {
   color: white;
   font-size: 38px;
   font-weight: 700;
   font-style: bold;
 }
+
 h2 span {
   color: white;
   font-weight: 100;
 }
+
 .logo_haous {
   color: rgba(54, 53, 52, 1);
 }
+
 .p-tag {
   color: rgba(54, 53, 52, 1);
   font-size: 24px;
@@ -31,11 +36,13 @@ h2 span {
   h2 {
     font-size: 20px;
   }
+
   h1 {
     font-size: 40px;
     margin-top: -10px;
     margin-bottom: 0;
   }
+
   .p-tag {
     color: rgba(54, 53, 52, 1);
     font-size: 18px;

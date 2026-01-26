@@ -96,8 +96,18 @@ footer span {
   color: white;
   font-weight: 200;
 }
-
+@media screen and (max-width: 1275px) {
+  footer {
+    margin-bottom: 75px;
+  }
+}
 @media screen and (max-width: 591px) {
+  .navbar {
+    padding-left: 20px;
+  }
+  .hamburger-icon img {
+    display: none;
+  }
   .menu_aot {
     margin: 15px;
     border-radius: 16px;
@@ -138,11 +148,11 @@ footer span {
   .menu_image {
     margin-top: 670px;
   }
-  footer{
-   gap: 0;
-    flex-direction:column-reverse;
+  footer {
+    gap: 0;
+    flex-direction: column-reverse;
     font-weight: 400;
     font-size: 12px;
+    margin-bottom: 75px;
   }
-
 }

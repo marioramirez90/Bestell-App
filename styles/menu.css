@@ -82,7 +82,17 @@
     padding-right: 10px;
   }
 }
-
+@media screen and (max-width: 1275px) {
+  .manu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .article_menu {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 591px) {
   .manu {
     margin: 0 20px;
