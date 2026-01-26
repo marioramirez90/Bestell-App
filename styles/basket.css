@@ -50,8 +50,55 @@
 }
 
 .busket_full{
-    height: 400px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
+.busket_item{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(253, 234, 220, 1);
+    padding: 20px;
+    gap: 8px;
+    border-radius: 20px;
+    height: 120px;
+    width: 310px;
+}
+
+.busket_header_name{
+    display: flex;
+    gap: 8px;
+
+}
+.basket_bottom{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.total_amount{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.subtotal{
+    display: flex; 
+    justify-content: space-between;
+    width: 300px;
+    
+}
+.deliver_free{
+    display: flex; 
+    justify-content: space-between;
+    width: 300px;
+}
+.total_price{
+    display: flex; 
+    justify-content: space-between;
+    width: 300px;
 }
 
 @media screen and (max-width: 1275px) {

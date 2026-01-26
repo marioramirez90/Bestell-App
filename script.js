@@ -28,6 +28,7 @@ function renderMenu() {
 
 function renderBusket() {
   const busketRef = document.getElementById("basket")
+  const test = document.getElementById("addtocart")
 
   if (cart.length === 0) {
     busketRef.innerHTML = emptyBasket();
@@ -41,7 +42,7 @@ function renderBusket() {
     let total = subtotal + deliverFree;
     cartValue += totalPrice(subtotal, total);
     
-    busketRef.innerHTML = cartValue;
+    test.innerHTML = cartValue;
   }
 }
 function addToBasket(id) {
