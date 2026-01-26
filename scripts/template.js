@@ -44,7 +44,8 @@ function fullBasket(){
 </section>`
 }
 
-    return `
+    function TotalPrice (){
+        return `
     </section>
     <section class="total_amount">
         <div class="subtotal">
@@ -61,7 +62,7 @@ function fullBasket(){
         </div>
     </section>
     `
-
+    }
 
 /*function burgerMenuRender(i){
     return `<article class="article_menu">
