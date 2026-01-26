@@ -1,4 +1,25 @@
+const burgerCategory = document.getElementById("burger");
+
 function init(){
+    renderMenu();
+   
+}
+
+function renderMenu(){
+  for (let i = 0; i < array.length; i++) {
+    
+    
+  }
+}
+function closeBasket(){
+  let closeBasket= document.getElementById("basket");
+  closeBasket.style.display = "none";
+}
+function openBasket(){
+  let openBasket = document.getElementById("basket")
+  openBasket.style.display ="flex";
+}
+/*function init(){
     renderBurger();
     renderPizza();
     renderSalad();
@@ -37,12 +58,4 @@ function renderBusket(){
                  <img src="assets/icons/basket.svg" alt="">
             </section>`
 }
-
-function closeBasket(){
-  let closeBasket= document.getElementById("basket");
-  closeBasket.style.display = "none";
-}
-function openBasket(){
-  let openBasket = document.getElementById("basket")
-  openBasket.style.display ="flex";
-}
+*/
