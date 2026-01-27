@@ -12,6 +12,10 @@ function renderMenu() {
   const pizzaCategory = document.getElementById("pizzaMenu");
   const saladCategory = document.getElementById("saladMenu");
 
+  burgerCategory.innerHTML = "";
+  pizzaCategory.innerHTML = "";
+  saladCategory.innerHTML = "";
+
   for (let i = 0; i < menu.length; i++) {
     const menuRef = menu[i];
     let categoryref;
@@ -89,11 +93,11 @@ function addToBasket(id) {
   openBasket();
 }
 
-
 function increaseQuantity(index) {
   cart[index].quantity++;
   renderBusket();
 }
+
 function decreaseQuantity(index) {
   cart[index].quantity--;
   if (cart[index].quantity <= 0) {
@@ -106,10 +110,12 @@ function deleteItem(index) {
   cart.splice(index, 1);
   renderBusket();
 }
+
 function closeBasket() {
   let closeBasket = document.getElementById("basket");
   closeBasket.style.display = "none";
 }
+
 function openBasket() {
   let openBasket = document.getElementById("basket");
   openBasket.style.display = "flex";

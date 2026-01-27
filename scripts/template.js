@@ -56,19 +56,21 @@ function fullBasket(i){
             <span>${subtotalParam.toFixed(2)} €</span>
         </div>
         <div class="deliver_free">
-            <p>Lieferkosten</p>
+            <p>Lieferkosten :</p>
             <span>${deliverFree.toFixed(2)} €</span>
         </div>
+         <div class="white_line"></div>
         <div class="total_price">
             <p>gesamtsumme:</p>
             <span>${totalParam.toFixed(2)} €</span>
         </div>
+        <div class="button_buy_now"><button>Buy now</button></div>
     </section>
     `
     }
 
     function busketHeader(){
-        return `<h2>Dein Warenkorb</h2>`
+        return `<h2 class="busket_title">Dein Warenkorb</h2>`
     }
 
 /*function burgerMenuRender(i){
