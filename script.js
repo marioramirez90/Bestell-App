@@ -27,11 +27,41 @@ function renderMenu() {
 }
 
 function renderBusket() {
-  const busketRef = document.getElementById("basket")
-  const addToCartRef = document.getElementById("addtocart")
-  const priceEndRef = document.getElementById("price_end")
+  const basketHeaderRef = document.getElementById("basketHeader");
+  const addToCartRef = document.getElementById("addtocart");
+  const priceEndRef = document.getElementById("price_end");
 
+  if (!basketHeaderRef || !addToCartRef || !priceEndRef) return;
+
+  basketHeaderRef.innerHTML = busketHeader();
+
+  if (cart.length === 0) {
+    addToCartRef.innerHTML = emptyBasket();
+    priceEndRef.innerHTML = "";
+    return;
+  }
+  let cartbusketRef = "";
+  for (let i = 0; i < cart.length; i++) {
+    cartbusketRef += fullBasket(i);
+  }
+   addToCartRef.innerHTML = cartbusketRef;
+  renderTotalPrice();
 }
+
+
+
+function renderTotalPrice() {
+  const priceEndRef = document.getElementById("price_end");
+
+  let subtotal = 0;
+  for (let i = 0; i < cart.length; i++) {
+    subtotal += cart[i].item.price * cart[i].quantity;
+  }
+  let total = subtotal + deliverFree;
+  priceEndRef.innerHTML = totalPrice(subtotal, total);
+}
+
+
 function addToBasket(id) {
   let itemToAdd = null;
   for (let i = 0; i < menu.length; i++) {
@@ -59,22 +89,22 @@ function addToBasket(id) {
   openBasket();
 }
 
-  
+
 function increaseQuantity(index) {
-    cart[index].quantity++;
-    renderBusket();
+  cart[index].quantity++;
+  renderBusket();
 }
 function decreaseQuantity(index) {
-    cart[index].quantity--;
-    if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
-    }
-    renderBusket();
+  cart[index].quantity--;
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+  renderBusket();
 }
 
 function deleteItem(index) {
-    cart.splice(index, 1);
-    renderBusket();
+  cart.splice(index, 1);
+  renderBusket();
 }
 function closeBasket() {
   let closeBasket = document.getElementById("basket");

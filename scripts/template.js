@@ -16,9 +16,8 @@ function menuMealrender(menuRef){
 
 function emptyBasket(){
     return ` <section class="empty-basket">
-    <div class="close_btn"><button class="close" id="closeButton" onclick="closeBasket()">X</button></div>
-                 
-                 <h2>Dein WarenKorb</h2>
+    <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
+
                  <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
                  <img src="assets/icons/basket.svg" alt="">
             </section>`
@@ -27,9 +26,9 @@ function emptyBasket(){
 function fullBasket(i){
     let cartItemRef = cart[i];
     let totalRef = cartItemRef.item.price * cartItemRef.quantity;
-    return `<section class="busket_full">
-    
+    return `
     <article class="busket_item">
+    <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
         <div class="busket_header_name" >
             <span class="basket_total">${cartItemRef.quantity} +</span>
              <p class="basket_menu_name" >${cartItemRef.item.name}</p>
@@ -45,7 +44,7 @@ function fullBasket(i){
            
         </div>
     </article>
-</section>`;
+`;
 }
 
     function totalPrice (subtotalParam, totalParam){
@@ -66,6 +65,10 @@ function fullBasket(i){
         </div>
     </section>
     `
+    }
+
+    function busketHeader(){
+        return `<h2>Dein Warenkorb</h2>`
     }
 
 /*function burgerMenuRender(i){
