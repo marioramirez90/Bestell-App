@@ -31,25 +31,6 @@ function renderBusket() {
   const addToCartRef = document.getElementById("addtocart")
   const priceEndRef = document.getElementById("price_end")
 
-  if (cart.length === 0) {
-    busketRef.innerHTML = emptyBasket();
-    addToCartRef.innerHTML = "";
-    priceEndRef.innerHTML = "";
-  } else { 
-    let cartValue = "";
-        let subtotal = 0;
-        for (let i = 0; i < cart.length; i++) {
-            subtotal += cart[i].item.price * cart[i].quantity;
-            cartValue += fullBasket(i);
-        }
-
-        addToCartRef.innerHTML = cartValue;
-
-    let total = subtotal + deliverFree;
-    priceEndRef.innerHTML = totalPrice(subtotal, total);
-    
-    busketRef.innerHTML = `<h2>Dein Warenkorb</h2>`;
-  }
 }
 function addToBasket(id) {
   let itemToAdd = null;
