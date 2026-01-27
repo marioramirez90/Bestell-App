@@ -1,26 +1,25 @@
 function menuMealrender(menuRef) {
   return `<article class="article_menu">
-                    <div class="article_header">
-                    <img src="${menuRef.image}" alt="burger">
-                    </div>
-                    <div class="article_main">
-                    <h2>${menuRef.name}</h2>
-                    <p>${menuRef.description}</p>
-                    </div>
-                    <div class="article_bottom">
-                        <span>${menuRef.price.toFixed(2)}€</span>
-                         <button class="article_button" onclick="addToBasket(${menuRef.id})">                 
-                          </div>
-                </article>`;
+    <div class="article_header">
+    <img src="${menuRef.image}" alt="burger">
+    </div>
+    <div class="article_main">
+    <h2>${menuRef.name}</h2>
+    <p>${menuRef.description}</p>
+    </div>
+    <div class="article_bottom">
+    <span>${menuRef.price.toFixed(2)}€</span>
+    <button class="article_button" onclick="addToBasket(${menuRef.id})">+</button>                
+    </div>
+    </article>`;
 }
 
 function emptyBasket() {
   return ` <section class="empty-basket">
     <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
-
-                 <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
-                 <img src="assets/icons/basket.svg" alt="">
-            </section>`;
+    <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
+    <img src="assets/icons/basket.svg" alt="">
+    </section>`;
 }
 
 function fullBasket(i) {
@@ -29,22 +28,19 @@ function fullBasket(i) {
   return `
     <article class="busket_item">
     <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
-        <div class="busket_header_name" >
-            <span class="basket_total">${cartItemRef.quantity} +</span>
-             <p class="basket_menu_name" >${cartItemRef.item.name}</p>
+    <div class="busket_header_name" >
+    <span class="basket_total">${cartItemRef.quantity} +</span>
+    <p class="basket_menu_name" >${cartItemRef.item.name}</p>
         </div>
-        <div>
-            <div class="basket_bottom">
-            <div class="basket_bottom_button">
-                <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
-                 <span class="basket_value">${cartItemRef.quantity}</span>
-                 <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
-                 </div>
-
-                  <div><span class="busket_price">${totalRef.toFixed(2)} €</span></div>
-            </div>
-           
-        </div>
+    <div>
+    <div class="basket_bottom">
+    <div class="basket_bottom_button">
+    <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
+    <span class="basket_value">${cartItemRef.quantity}</span>
+    <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
+    </div>
+    <div><span class="busket_price">${totalRef.toFixed(2)} €</span></div>
+    </di</div>
     </article>
 `;
 }
@@ -53,20 +49,20 @@ function totalPrice(subtotalParam, totalParam) {
   return `
     </section>
     <section class="total_amount">
-        <div class="subtotal">
-            <p>Zwischensumme :</p>
-            <span>${subtotalParam.toFixed(2)} €</span>
-        </div>
-        <div class="deliver_free">
-            <p>Lieferkosten :</p>
-            <span>${deliverFree.toFixed(2)} €</span>
-        </div>
-         <div class="white_line"></div>
-        <div class="total_price">
-            <p>gesamtsumme:</p>
-            <span>${totalParam.toFixed(2)} €</span>
-        </div>
-        <div class="button_buy_now"><button>Buy now ${totalParam.toFixed(2)} €</button></div>
+    <div class="subtotal">
+    <p>Zwischensumme :</p>
+    <span>${subtotalParam.toFixed(2)} €</span>
+    </div>
+    <div class="deliver_free">
+    <p>Lieferkosten :</p>
+    <span>${deliverFree.toFixed(2)} €</span>
+    </div>
+    <div class="white_line"></div>
+    <div class="total_price">
+    <p>gesamtsumme:</p>
+    <span>${totalParam.toFixed(2)} €</span>
+    </div>
+    <div class="button_buy_now"><button>Buy now ${totalParam.toFixed(2)} €</button></div>
     </section>
     `;
 }

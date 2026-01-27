@@ -57,21 +57,16 @@ function renderTotalPrice() {
 }
 
 function addToBasket(id) {
-  let itemToBusket = menu.find(item => item.id === id);
+  let itemToBusket = menu.find((item) => item.id === id);
   if (!itemToBusket) return;
-
-  let busketItem = cart.find(entry => entry.item.id === id);
-
+  let busketItem = cart.find((entry) => entry.item.id === id);
   if (!busketItem) {
     cart.push({ item: itemToBusket, quantity: 1 });
   } else {
     busketItem.quantity++;
   }
-
   renderBusket();
 }
-
-
 
 function increaseQuantity(index) {
   cart[index].quantity++;
