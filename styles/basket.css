@@ -172,6 +172,10 @@
     font-size: 20px;
     font-weight: 400;
  }
+
+ .busket_minus{
+    display: none;
+ }
  .button_buy_now button{
     margin-top: 40px;
     max-width: 300px;

@@ -34,7 +34,8 @@ function fullBasket(i) {
     
     <div class="basket_bottom">
     <div class="basket_bottom_button">
-    <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
+    <button id="newItem" class="busket_minus" onclick="decreaseQuantity(${i})">+</button>
+    <button id="delete" class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
     <span class="basket_value">${cartItemRef.quantity}</span>
     <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
     </div>

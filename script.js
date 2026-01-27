@@ -71,6 +71,7 @@ function addToBasket(id) {
 function increaseQuantity(index) {
   cart[index].quantity++;
   renderBusket();
+  document.getElementById("delete").style.display = "none";
 }
 
 function decreaseQuantity(index) {
