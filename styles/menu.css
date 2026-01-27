@@ -50,13 +50,14 @@
 
 .article_button {
   height: 30px;
-  width: 115px;
+  width: 85px;
   padding: 5px 8px 5px 8px;
   border: none;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(54, 53, 52, 1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(231, 108, 31, 1);
   cursor: pointer;
+  font-size: 20px;
 }
 
 .manu {

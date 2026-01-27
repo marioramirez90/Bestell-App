@@ -27,20 +27,21 @@ function fullBasket(i) {
   let totalRef = cartItemRef.item.price * cartItemRef.quantity;
   return `
     <article class="busket_item">
-    <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
     <div class="busket_header_name" >
-    <span class="basket_total">${cartItemRef.quantity} +</span>
+    <span class="basket_total">${cartItemRef.quantity}x</span>
     <p class="basket_menu_name" >${cartItemRef.item.name}</p>
-        </div>
-    <div>
+    </div>
+    
     <div class="basket_bottom">
     <div class="basket_bottom_button">
     <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
     <span class="basket_value">${cartItemRef.quantity}</span>
     <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
     </div>
-    <div><span class="busket_price">${totalRef.toFixed(2)} €</span></div>
-    </di</div>
+    <div>
+    <span class="busket_price">${totalRef.toFixed(2)} €</span></div>
+    </div>
+    </div>
     </article>
 `;
 }
@@ -50,17 +51,17 @@ function totalPrice(subtotalParam, totalParam) {
     </section>
     <section class="total_amount">
     <div class="subtotal">
-    <p>Zwischensumme :</p>
-    <span>${subtotalParam.toFixed(2)} €</span>
+    <p class="wihte">Zwischensumme :</p>
+    <span class="wihte">${subtotalParam.toFixed(2)} €</span>
     </div>
     <div class="deliver_free">
-    <p>Lieferkosten :</p>
-    <span>${deliverFree.toFixed(2)} €</span>
+    <p class="wihte">Lieferkosten :</p>
+    <span class="wihte">${deliverFree.toFixed(2)} €</span>
     </div>
     <div class="white_line"></div>
     <div class="total_price">
-    <p>gesamtsumme:</p>
-    <span>${totalParam.toFixed(2)} €</span>
+    <p class="wihte">gesamtsumme:</p>
+    <span class="wihte">${totalParam.toFixed(2)} €</span>
     </div>
     <div class="button_buy_now"><button>Buy now ${totalParam.toFixed(2)} €</button></div>
     </section>
