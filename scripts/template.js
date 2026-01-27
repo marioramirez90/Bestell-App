@@ -1,5 +1,5 @@
-function menuMealrender(menuRef){
-    return `<article class="article_menu">
+function menuMealrender(menuRef) {
+  return `<article class="article_menu">
                     <div class="article_header">
                     <img src="${menuRef.image}" alt="burger">
                     </div>
@@ -9,24 +9,24 @@ function menuMealrender(menuRef){
                     </div>
                     <div class="article_bottom">
                         <span>${menuRef.price.toFixed(2)}€</span>
-                        <button class="article_button" onclick="addToBasket(${menuRef.id})">add to basket</button>
-                    </div>
+                         <button class="article_button" onclick="addToBasket(${menuRef.id})">                 
+                          </div>
                 </article>`;
 }
 
-function emptyBasket(){
-    return ` <section class="empty-basket">
+function emptyBasket() {
+  return ` <section class="empty-basket">
     <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
 
                  <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
                  <img src="assets/icons/basket.svg" alt="">
-            </section>`
+            </section>`;
 }
 
-function fullBasket(i){
-    let cartItemRef = cart[i];
-    let totalRef = cartItemRef.item.price * cartItemRef.quantity;
-    return `
+function fullBasket(i) {
+  let cartItemRef = cart[i];
+  let totalRef = cartItemRef.item.price * cartItemRef.quantity;
+  return `
     <article class="busket_item">
     <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
         <div class="busket_header_name" >
@@ -35,10 +35,12 @@ function fullBasket(i){
         </div>
         <div>
             <div class="basket_bottom">
-                 <button class="busket_delet" onclick="decreaseQuantity(${i})">-</button>
+            <div class="basket_bottom_button">
+                <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
                  <span class="basket_value">${cartItemRef.quantity}</span>
                  <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
-                 <button class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
+                 </div>
+
                   <div><span class="busket_price">${totalRef.toFixed(2)} €</span></div>
             </div>
            
@@ -47,8 +49,8 @@ function fullBasket(i){
 `;
 }
 
-    function totalPrice (subtotalParam, totalParam){
-        return `
+function totalPrice(subtotalParam, totalParam) {
+  return `
     </section>
     <section class="total_amount">
         <div class="subtotal">
@@ -64,14 +66,14 @@ function fullBasket(i){
             <p>gesamtsumme:</p>
             <span>${totalParam.toFixed(2)} €</span>
         </div>
-        <div class="button_buy_now"><button>Buy now</button></div>
+        <div class="button_buy_now"><button>Buy now ${totalParam.toFixed(2)} €</button></div>
     </section>
-    `
-    }
+    `;
+}
 
-    function busketHeader(){
-        return `<h2 class="busket_title">Dein Warenkorb</h2>`
-    }
+function busketHeader() {
+  return `<h2 class="busket_title">Dein Warenkorb</h2>`;
+}
 
 /*function burgerMenuRender(i){
     return `<article class="article_menu">
