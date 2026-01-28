@@ -11,7 +11,6 @@ const dialogRef = document.getElementById("confirmedDialog");
 function init() {
   renderMenu();
   renderBusket();
-  
 }
 
 function renderMenu() {
@@ -38,15 +37,15 @@ function renderBusket() {
   if (cart.length === 0) {
     addToCartRef.innerHTML = emptyBasket();
     priceEndRef.innerHTML = "";
-  }else{
-  let cartbusketRef = "";
-  for (let i = 0; i < cart.length; i++) {
-    cartbusketRef += fullBasket(i);
+  } else {
+    let cartbusketRef = "";
+    for (let i = 0; i < cart.length; i++) {
+      cartbusketRef += fullBasket(i);
+    }
+    addToCartRef.innerHTML = cartbusketRef;
+    renderTotalPrice();
   }
-  addToCartRef.innerHTML = cartbusketRef;
-  renderTotalPrice();
-} 
-  busketCounter()
+    busketCounter();
 }
 
 function renderTotalPrice() {
@@ -73,7 +72,7 @@ function addToBasket(id) {
 
 function increaseQuantity(index) {
   cart[index].quantity++;
-  renderBusket(); 
+  renderBusket();
 }
 
 function decreaseQuantity(index) {
@@ -92,7 +91,6 @@ function deleteItem(index) {
 function busketCounter() {
   let counterRef = document.getElementById("basketCounter");
   let totalCount = 0;
-
   for (let i = 0; i < cart.length; i++) {
     totalCount += cart[i].quantity;
   }
@@ -107,11 +105,10 @@ function busketCounter() {
 
 function changeButton(quantity, index) {
   if (quantity === 1) {
-return deleteBusketItem(index);
+    return deleteBusketItem(index);
   }
   return addMinusbusket(index);
 }
-
 
 function closeBasket() {
   let closeBasket = document.getElementById("basket");
@@ -123,13 +120,13 @@ function openBasket() {
   openBasket.style.display = "flex";
 }
 
-function openDialog(){
+function openDialog() {
   dialogRef.showModal();
 }
 
-function closeDialog(index){
-  dialogRef.close()
-   cart.splice(index);
+function closeDialog(index) {
+  dialogRef.close();
+  cart.splice(index);
   renderBusket();
 }
 

@@ -32,6 +32,16 @@ h2 span {
   font-style: bold;
 }
 
+@media screen and (max-width: 720px) {
+  .p-tag {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 591px) {
   h2 {
     font-size: 20px;

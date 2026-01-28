@@ -44,7 +44,6 @@ function fullBasket(i) {
 `;
 }
 
-
 function totalPrice(subtotalParam, totalParam) {
   return `
     </section>
@@ -62,34 +61,30 @@ function totalPrice(subtotalParam, totalParam) {
     <p class="wihte">gesamtsumme:</p>
     <span class="wihte">${totalParam.toFixed(2)} €</span>
     </div>
-    <div class="button_buy_now" onclick="openDialog()" ><button>Buy now ${totalParam.toFixed(2)} €</button></div>
+    <div class="button_buy_now" onclick="openDialog()" ><button class="button_buy_now_button" >Buy now ${totalParam.toFixed(2)} €</button></div>
     </section>
     `;
 }
 
 function busketHeader() {
   return `
-      <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
-
-  <h2 class="busket_title">Dein Warenkorb</h2>`;
+    <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
+    <h2 class="busket_title">Dein Warenkorb</h2>`;
 }
 
-function deleteBusketItem(index){
-return `
-      <button class="busket_trash" onclick="deleteItem(${index})">
-        <img src="assets/icons/delete.svg">
-      </button>
+function deleteBusketItem(index) {
+  return `
+    <button class="busket_trash" onclick="deleteItem(${index})">
+    <img src="assets/icons/delete.svg">
+    </button>
     `;
 }
 
-  
-
-  function addMinusbusket(index){
-    return `
+function addMinusbusket(index) {
+  return `
     <button class="busket_minus" onclick="decreaseQuantity(${index})">-</button>
   `;
-
-  } 
+}
 
 /*function burgerMenuRender(i){
     return `<article class="article_menu">

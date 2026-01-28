@@ -1,120 +1,119 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bestell App</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles/standard.css" />
-    <link rel="stylesheet" href="styles/basket.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
-    <link rel="stylesheet" href="styles/menu.css" />
-  </head>
-  <body onload="init()">
-    <header>
-      <nav class="navbar">
-        <div class="app-logo">
-          <img src="assets/icons/Logo 02.svg" alt="logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestell App</title>
+  <link rel="shortcut icon" href="assets/icons/Logo 02.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/standard.css" />
+  <link rel="stylesheet" href="styles/basket.css" />
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <link rel="stylesheet" href="styles/menu.css" />
+</head>
+
+<body onload="init()">
+  <header>
+    <nav class="navbar">
+      <div class="app-logo">
+        <img src="assets/icons/Logo 02 (1).svg" alt="logo" />
+      </div>
+
+      <div class="hamburger-icon">
+        <img src="assets/icons/menu.svg" alt="hamburegr-icon" />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu_content">
+      <section class="menu_aot">
+        <div class="menu_image">
+          <img class="burger-img" src="assets/img/Ellipse 16.png" alt="" />
+          <div class="h1_header">
+            <h1>
+              <span class="logo_burger">Burger</span><span class="logo_haous">Haus</span>
+            </h1>
+            <img class="star-img" src="assets/icons/Frame 28.png" alt="" />
+          </div>
+          <p class="p-tag">
+            The best of Burgers, Pizza, and Greens, all in one great place.
+          </p>
         </div>
-
-        <div class="hamburger-icon">
-          <img src="assets/icons/menu.svg" alt="hamburegr-icon" />
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="menu_content">
-        <section class="menu_aot">
-          <div class="menu_image">
-            <img class="burger-img" src="assets/img/Ellipse 16.png" alt="" />
-            <div class="h1_header">
-              <h1>
-                <span class="logo_burger">Burger</span
-                ><span class="logo_haous">Haus</span>
-              </h1>
-              <img class="star-img" src="assets/icons/Frame 28.png" alt="" />
-            </div>
-            <p class="p-tag">
-              The best of Burgers, Pizza, and Greens, all in one great place.
-            </p>
-          </div>
-        </section>
-
-        <section class="menu_category">
-          <div class="menu_category_header">
-            <img src="assets/img/Chanese 1.png" alt="" />
-            <h2>Burger & Sandwiches</h2>
-          </div>
-          <div class="manu" id="burgerMenu"></div>
-        </section>
-
-        <section class="menu_category" id="pizza">
-          <div class="menu_category_header">
-            <img src="assets/img/Pizza 1.png" alt="" />
-            <h2 class="h-tag">Pizza<span>(30cm)</span></h2>
-          </div>
-          <div class="manu" id="pizzaMenu"></div>
-        </section>
-
-        <section class="menu_category" id="salad">
-          <div class="menu_category_header">
-            <img src="assets/img/Salad 1.png" alt="" />
-            <h2>Salat</h2>
-          </div>
-          <div class="manu" id="saladMenu"></div>
-        </section>
       </section>
 
-      <aside class="basket_wrapper">
-        <section id="basket" class="basket">
-            <div class="busket_container">
-            <div class="basket-header" id="basketHeader"></div>
-            <div class="addtocart_container" id="addtocart"></div>
-            <div class="price_container" id="price_end"></div>
-            </div>
-        </section>
-      </aside>
-    </main>
+      <section class="menu_category">
+        <div class="menu_category_header">
+          <img src="assets/img/Chanese 1.png" alt="" />
+          <h2>Burger & Sandwiches</h2>
+        </div>
+        <div class="manu" id="burgerMenu"></div>
+      </section>
 
-    <dialog id="confirmedDialog" class="confirmed">
-      <div class="all">
+      <section class="menu_category" id="pizza">
+        <div class="menu_category_header">
+          <img src="assets/img/Pizza 1.png" alt="" />
+          <h2 class="h-tag">Pizza<span>(30cm)</span></h2>
+        </div>
+        <div class="manu" id="pizzaMenu"></div>
+      </section>
+
+      <section class="menu_category" id="salad">
+        <div class="menu_category_header">
+          <img src="assets/img/Salad 1.png" alt="" />
+          <h2>Salat</h2>
+        </div>
+        <div class="manu" id="saladMenu"></div>
+      </section>
+    </section>
+
+    <aside class="basket_wrapper">
+      <section id="basket" class="basket">
+        <div class="busket_container">
+          <div class="basket-header" id="basketHeader"></div>
+          <div class="addtocart_container" id="addtocart"></div>
+          <div class="price_container" id="price_end"></div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="confirmedDialog" class="confirmed">
+    <div class="all">
       <header class="dialog_header">
         <button onclick="closeDialog()" class="confirmed_header">X</button>
       </header>
       <section>
         <div class="confirmed_main">
-        <img src="assets/img/ChatGPT Image Nov 24, 2025, 11_51_33 AM 1.png" alt="icon">
-        <h2>Bestellung bestätigt!</h2>
-        <p>Dein Essen ist unterwegs!</p>
-      </div>
-    </section>
-  </div>
-    </dialog>
-
-
-    <footer>
-      <span>©2025 BurgerHause</span>
-      <span>Imprint</span>
-      <span>Cookie Preferences</span>
-    </footer>
-    <div class="mobile_footer">
-      <div><img src="assets/icons/home.svg" alt="" /></div>
-      <div><img src="assets/icons/person.svg" alt="" /></div>
-      <div><img src="assets/icons/takeout_dining_2.svg" alt="" /></div>
-      <div class="counter" onclick="openBasket()">
-        <div id="basketCounter" class="basket_counter"><p></p></div>
-
-        <img
-          src="assets/icons/shopping_cart.svg"
-          alt=""
-        />
-      </div>
+          <img src="assets/img/ChatGPT Image Nov 24, 2025, 11_51_33 AM 1.png" alt="icon" />
+          <h2>Bestellung bestätigt!</h2>
+          <p>Dein Essen ist unterwegs!</p>
+        </div>
+      </section>
     </div>
-  </body>
-  <script src="scripts/db.js"></script>
-  <script src="scripts/template.js"></script>
-  <script src="script.js"></script>
+  </dialog>
+
+  <footer>
+    <span>©2025 BurgerHause</span>
+    <span>Imprint</span>
+    <span>Cookie Preferences</span>
+  </footer>
+  <div class="mobile_footer">
+    <div><img src="assets/icons/home.svg" alt="" /></div>
+    <div><img src="assets/icons/person.svg" alt="" /></div>
+    <div><img src="assets/icons/takeout_dining_2.svg" alt="" /></div>
+    <div class="counter" onclick="openBasket()">
+      <div id="basketCounter" class="basket_counter">
+        <p></p>
+      </div>
+
+      <img src="assets/icons/shopping_cart.svg" alt="" />
+    </div>
+  </div>
+</body>
+<script src="scripts/db.js"></script>
+<script src="scripts/template.js"></script>
+<script src="script.js"></script>
+
 </html>
-
-

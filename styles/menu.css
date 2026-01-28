@@ -58,6 +58,11 @@
   background-color: rgba(231, 108, 31, 1);
   cursor: pointer;
   font-size: 20px;
+  transition: all 1s;
+}
+
+.article_button:hover {
+  transform: scale(1.1);
 }
 
 .manu {
@@ -83,6 +88,7 @@
     padding-right: 10px;
   }
 }
+
 @media screen and (max-width: 1275px) {
   .manu {
     display: flex;
@@ -90,10 +96,12 @@
     flex-direction: column;
     margin: 0 auto;
   }
+
   .article_menu {
     justify-content: center;
   }
 }
+
 @media screen and (max-width: 591px) {
   .manu {
     margin: 0 20px;
