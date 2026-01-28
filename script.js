@@ -106,10 +106,10 @@ function busketCounter() {
 
 function changeButton(quantity, index) {
   if (quantity === 1) {
-return deleteBusketItem();
+return deleteBusketItem(index);
   }
 
-  return addMinusbusket();
+  return addMinusbusket(index);
 }
 
 

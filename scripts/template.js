@@ -72,7 +72,7 @@ function busketHeader() {
   return `<h2 class="busket_title">Dein Warenkorb</h2>`;
 }
 
-function deleteBusketItem(){
+function deleteBusketItem(index){
 return `
       <button class="busket_trash" onclick="deleteItem(${index})">
         <img src="assets/icons/delete.svg">
@@ -82,7 +82,7 @@ return `
 
   
 
-  function addMinusbusket(){
+  function addMinusbusket(index){
     return `
     <button class="busket_minus" onclick="decreaseQuantity(${index})">-</button>
   `;
