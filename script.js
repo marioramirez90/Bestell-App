@@ -6,6 +6,7 @@ const saladCategory = document.getElementById("saladMenu");
 const basketHeaderRef = document.getElementById("basketHeader");
 const addToCartRef = document.getElementById("addtocart");
 const priceEndRef = document.getElementById("price_end");
+const dialogRef = document.getElementById("confirmedDialog");
 
 function init() {
   renderMenu();
@@ -121,6 +122,11 @@ function closeBasket() {
 function openBasket() {
   let openBasket = document.getElementById("basket");
   openBasket.style.display = "flex";
+}
+
+function openDialog(){
+  dialogRef.showModal();
+
 }
 
 /*function init(){

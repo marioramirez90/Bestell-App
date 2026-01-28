@@ -62,7 +62,7 @@ function totalPrice(subtotalParam, totalParam) {
     <p class="wihte">gesamtsumme:</p>
     <span class="wihte">${totalParam.toFixed(2)} €</span>
     </div>
-    <div class="button_buy_now"><button>Buy now ${totalParam.toFixed(2)} €</button></div>
+    <div class="button_buy_now" onclick="openDialog()" ><button>Buy now ${totalParam.toFixed(2)} €</button></div>
     </section>
     `;
 }
