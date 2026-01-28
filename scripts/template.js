@@ -16,7 +16,6 @@ function menuMealrender(menuRef) {
 
 function emptyBasket() {
   return ` <section class="empty-basket">
-    <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
     <p>Hier ist noch nichts. Such dir etwas Leckeres aus!</p>
     <img src="assets/icons/basket.svg" alt="">
     </section>`;
@@ -69,7 +68,10 @@ function totalPrice(subtotalParam, totalParam) {
 }
 
 function busketHeader() {
-  return `<h2 class="busket_title">Dein Warenkorb</h2>`;
+  return `
+      <div class="close_btn"><button class="close" onclick="closeBasket()">X</button></div>
+
+  <h2 class="busket_title">Dein Warenkorb</h2>`;
 }
 
 function deleteBusketItem(index){

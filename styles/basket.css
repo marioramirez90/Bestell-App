@@ -24,14 +24,18 @@
     gap: 30px;
 }
 .addtocart_container{
-    height: 280px;
-     height: 300px;
+  height: 310px;
   overflow-y: auto;
-  padding: 10px;
- 
+  margin-left: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.addtocart_container::-webkit-scrollbar{
+  display: none;
 }
 .busket_title{
-    
+    font-size: 28px;
     color:rgba(253, 234, 220, 1); ;
 }
 .mobile_footer {
@@ -45,7 +49,11 @@
   padding: 30px;
   
 }
-
+.busket_minus{
+  margin-left: 5px;
+  margin-right: 8px;
+  margin-top: -3px;
+}
 .empty-basket p {
   font-size: 18px;
   color: rgba(253, 234, 220, 1);
@@ -67,7 +75,7 @@
     flex-direction: column;
     align-items: start;
     background-color:rgba(253, 234, 220, 1);
-    padding:15px;
+    padding:10px;
     gap: 5px;
     border-radius: 20px;
     max-height: 120px;
@@ -88,12 +96,12 @@
 
 .busket_header_name span{
     color:rgba(54, 53, 52, 1); ;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .busket_header_name p{
     color: rgba(54, 53, 52, 1);
-    font-size: 22px;
+    font-size: 18px;
 
 }
 .basket_bottom{
@@ -186,6 +194,7 @@
     background-color: rgba(231, 108, 31, 1);
     color: white;
     font-size: 28px ;
+    cursor: pointer;
  }
 
 
@@ -197,9 +206,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
-    max-width: 935px;
+    max-width: 405px;
     margin-left: 0;
-    height: 600px;
+    height: 580px;
     border-radius: 20px 20px 0 0;
     z-index: 100;
   }
@@ -232,9 +241,14 @@
 
   .close_btn {
     display: flex;
-    max-width: 600px;
-    width: 100%;
     justify-content: end;
+  }
+
+  .close_btn button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
   }
   .mobile_footer {
     display: flex;
@@ -248,4 +262,114 @@
     width: 100%;
     z-index: 1000;
   }
+  .busket_item{
+    width: 230px;
+    margin-bottom: 5px;
+    height: 80px;
+    
+}
+.addtocart_container{
+    height: 265px;
+    width: 270px;
+   justify-content: center;
+   padding: 10px;
+  
+ 
+}
+.busket_container{
+   
+    gap: 10px;
+    
+}
+.basket_bottom{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 70px;
+}
+.busket_header_name span{
+   
+    font-size: 16px;
+}
+
+.busket_header_name p{
+    
+    font-size: 14px;
+
+}
+
+.button_buy_now button{
+    margin-top: 20px;
+    width: 230px;
+    height: 40px;
+    border-radius: 60px;
+    border: none;
+    background-color: rgba(231, 108, 31, 1);
+    color: white;
+    font-size: 20px ;
+ }
+ .price_container{
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  
+ }
+
+ .total_price{
+    font-size: 16px;
+    display: flex; 
+    justify-content: space-between;
+    width: 230px;
+}
+ .white_line{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 230px;
+    height: 2px;
+    background-color: white;
+ }
+.wihte{
+    color: white;
+}
+ .subtotal span{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+ }
+ .subtotal{
+    display: flex; 
+    justify-content: space-between;
+    width: 230px;
+    font-size: 16px;
+    
+}
+.deliver_free{
+    display: flex; 
+    justify-content: space-between;
+    width: 230px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.basket_value{
+    color:rgba(54, 53, 52, 1);
+    font-size: 16px;
+}
+.busket_price{
+   color: rgba(54, 53, 52, 1);
+   font-size: 16px;
+}
+
+.basket_bottom button{
+    border: none;
+  background: none;
+  color:rgba(54, 53, 52, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: -7px;
+  cursor: pointer;
+  
+}
+
 }
