@@ -72,6 +72,8 @@ function increaseQuantity(index) {
   cart[index].quantity++;
   renderBusket();
   document.getElementById("delete").style.display = "none";
+  document.getElementById("newItem").style.display = "flex";
+  
 }
 
 function decreaseQuantity(index) {
