@@ -10,6 +10,7 @@ const priceEndRef = document.getElementById("price_end");
 function init() {
   renderMenu();
   renderBusket();
+  
 }
 
 function renderMenu() {
@@ -36,14 +37,15 @@ function renderBusket() {
   if (cart.length === 0) {
     addToCartRef.innerHTML = emptyBasket();
     priceEndRef.innerHTML = "";
-    return;
-  }
+  }else{
   let cartbusketRef = "";
   for (let i = 0; i < cart.length; i++) {
     cartbusketRef += fullBasket(i);
   }
   addToCartRef.innerHTML = cartbusketRef;
   renderTotalPrice();
+} 
+  busketCounter()
 }
 
 function renderTotalPrice() {
@@ -85,19 +87,31 @@ function deleteItem(index) {
   cart.splice(index, 1);
   renderBusket();
 }
+
+function busketCounter() {
+  let counterRef = document.getElementById("basketCounter");
+  let totalCount = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    totalCount += cart[i].quantity;
+  }
+  if (totalCount === 0) {
+    counterRef.style.display = "none";
+    counterRef.innerHTML = "";
+  } else {
+    counterRef.style.display = "flex";
+    counterRef.innerHTML = totalCount;
+  }
+}
+
 function changeButton(quantity, index) {
   if (quantity === 1) {
-    return `
-      <button class="busket_trash" onclick="deleteItem(${index})">
-        <img src="assets/icons/delete.svg">
-      </button>
-    `;
+return deleteBusketItem();
   }
 
-  return `
-    <button class="busket_minus" onclick="decreaseQuantity(${index})">-</button>
-  `;
+  return addMinusbusket();
 }
+
 
 function closeBasket() {
   let closeBasket = document.getElementById("basket");

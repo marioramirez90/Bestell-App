@@ -72,6 +72,23 @@ function busketHeader() {
   return `<h2 class="busket_title">Dein Warenkorb</h2>`;
 }
 
+function deleteBusketItem(){
+return `
+      <button class="busket_trash" onclick="deleteItem(${index})">
+        <img src="assets/icons/delete.svg">
+      </button>
+    `;
+}
+
+  
+
+  function addMinusbusket(){
+    return `
+    <button class="busket_minus" onclick="decreaseQuantity(${index})">-</button>
+  `;
+
+  } 
+
 /*function burgerMenuRender(i){
     return `<article class="article_menu">
                     <div class="article_header">
