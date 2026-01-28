@@ -1,7 +1,7 @@
 function menuMealrender(menuRef) {
   return `<article class="article_menu">
     <div class="article_header">
-    <img src="${menuRef.image}" alt="burger">
+    <img src="${menuRef.image}" alt="${menuRef.alt}">
     </div>
     <div class="article_main">
     <h2>${menuRef.name}</h2>
