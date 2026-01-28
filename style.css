@@ -64,13 +64,18 @@ header {
 }
 
 .menu_category_header {
-  display: flex;
+display: flex;
   height: 60px;
-  width: 100%;
   background-color: rgba(231, 108, 31, 1);
   align-items: center;
-  padding-left: 160px;
   gap: 20px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding-left: max(
+    160px,
+    calc((100vw - 1440px) / 2 + 160px));
 }
 
 .menu_category_header img {
