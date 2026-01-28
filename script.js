@@ -126,7 +126,10 @@ function openBasket() {
 
 function openDialog(){
   dialogRef.showModal();
+}
 
+function closeDialog(){
+  dialogRef.close()
 }
 
 /*function init(){
