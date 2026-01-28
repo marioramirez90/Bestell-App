@@ -213,13 +213,14 @@
     z-index: 100;
   }
   .empty-basket {
-    margin-top: -200px;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 60px;
+    margin-left: -30px;
+    
   }
 
   .empty-basket h2 {
@@ -243,6 +244,11 @@
     display: flex;
     justify-content: end;
   }
+ .close{
+  color: rgba(253, 234, 220, 1);
+  margin-right: -10px;
+  margin-top: -20px;
+ }
 
   .close_btn button {
     background: none;
