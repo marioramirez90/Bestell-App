@@ -128,8 +128,10 @@ function openDialog(){
   dialogRef.showModal();
 }
 
-function closeDialog(){
+function closeDialog(index){
   dialogRef.close()
+   cart.splice(index);
+  renderBusket();
 }
 
 /*function init(){
