@@ -70,10 +70,7 @@ function addToBasket(id) {
 
 function increaseQuantity(index) {
   cart[index].quantity++;
-  renderBusket();
-  document.getElementById("delete").style.display = "none";
-  document.getElementById("newItem").style.display = "flex";
-  
+  renderBusket(); 
 }
 
 function decreaseQuantity(index) {
@@ -87,6 +84,19 @@ function decreaseQuantity(index) {
 function deleteItem(index) {
   cart.splice(index, 1);
   renderBusket();
+}
+function changeButton(quantity, index) {
+  if (quantity === 1) {
+    return `
+      <button class="busket_trash" onclick="deleteItem(${index})">
+        <img src="assets/icons/delete.svg">
+      </button>
+    `;
+  }
+
+  return `
+    <button class="busket_minus" onclick="decreaseQuantity(${index})">-</button>
+  `;
 }
 
 function closeBasket() {

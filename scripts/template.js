@@ -31,11 +31,9 @@ function fullBasket(i) {
     <span class="basket_total">${cartItemRef.quantity}x</span>
     <p class="basket_menu_name" >${cartItemRef.item.name}</p>
     </div>
-    
     <div class="basket_bottom">
     <div class="basket_bottom_button">
-    <button id="newItem" class="busket_minus" onclick="decreaseQuantity(${i})">+</button>
-    <button id="delete" class="busket_trash" onclick="deleteItem(${i})"><img src="assets/icons/delete.svg" alt="delet"></button>
+    ${changeButton(cartItemRef.quantity, i)}
     <span class="basket_value">${cartItemRef.quantity}</span>
     <button class="busket_plus" onclick="increaseQuantity(${i})">+</button>
     </div>
@@ -46,6 +44,7 @@ function fullBasket(i) {
     </article>
 `;
 }
+
 
 function totalPrice(subtotalParam, totalParam) {
   return `
