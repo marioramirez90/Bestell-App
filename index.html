@@ -78,13 +78,18 @@
     </main>
 
     <dialog id="confirmedDialog" class="confirmed">
-      <header><button onclick="closeDialog()" class="confirmed_header">X</button></header>
-      <section><div class="confirmed_main">
+      
+      <header class="dialog_header">
+        <button onclick="closeDialog()" class="confirmed_header">X</button>
+      </header>
+      <section>
+        <div class="confirmed_main">
         <img src="assets/img/ChatGPT Image Nov 24, 2025, 11_51_33 AM 1.png" alt="icon">
         <h2>Bestellung bestätigt!</h2>
         <p>Dein Essen ist unterwegs!</p>
-      </div></section>
-      
+      </div>
+    </section>
+  
     </dialog>
 
 
@@ -97,11 +102,10 @@
       <div><img src="assets/icons/home.svg" alt="" /></div>
       <div><img src="assets/icons/person.svg" alt="" /></div>
       <div><img src="assets/icons/takeout_dining_2.svg" alt="" /></div>
-      <div class="counter">
+      <div class="counter" onclick="openBasket()">
         <div id="basketCounter" class="basket_counter"><p></p></div>
 
         <img
-          onclick="openBasket()"
           src="assets/icons/shopping_cart.svg"
           alt=""
         />

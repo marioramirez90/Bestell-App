@@ -96,6 +96,49 @@ footer span {
   color: white;
   font-weight: 200;
 }
+
+.confirmed{
+  top: 25%;
+  height: 260px;
+  width: 415px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(54, 53, 52, 1);
+  border: none;
+  border-radius: 30px;
+  padding: 40px 32px 40px 32px;
+}
+.confirmed_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.confirmed_main h2{
+  font-size: 22px;
+ 
+}
+.confirmed_main p{
+  font-size: 16px;
+  color: white;
+}
+.dialog_header{
+  background: none;
+  width: 280px;
+  display: flex;
+  justify-content: end;
+  margin-top: -20px;
+}
+.confirmed_header{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
 @media screen and (max-width: 1275px) {
   footer {
     margin-bottom: 75px;
@@ -154,4 +197,32 @@ footer span {
     font-size: 12px;
     margin-bottom: 75px;
   }
+
+  .confirmed{
+  height: 200px;
+  width: 300px;
+  padding:10px ;
+}
+.confirmed_main h2{
+  font-size: 16px;
+ 
+}
+.confirmed_main p{
+  font-size: 14px;
+  color: white;
+}
+.dialog_header{
+  background: none;
+  width: 200px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0px;
+  height: 20px;
+}
+.confirmed_header{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
 }

@@ -109,7 +109,6 @@ function changeButton(quantity, index) {
   if (quantity === 1) {
 return deleteBusketItem(index);
   }
-
   return addMinusbusket(index);
 }
 
