@@ -7,7 +7,7 @@ Eine responsive Single-Page-Food-Ordering-Webanwendung, entwickelt im Rahmen der
 ## 🚀 Live Demo
 
 Hier geht's direkt zur Online-Version:  
-👉 **[Live Demo ansehen](https://marioramirez.de/projekte/bestell-app)**
+👉 **[Live Demo ansehen](https://marioramirez.de/projekte/bestellapp)**
 
 ---
 
